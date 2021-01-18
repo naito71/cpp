@@ -90,9 +90,35 @@ public:
 };
 
 
+void Class(){
+    std::cout<<"Class():"<<std::endl;
+
+    Hoge *hoge;
+    std::cout<<"hoge.Addr : "<<hoge<<std::endl;
+    
+    hoge=new Hoge(27,"NiT");
+    hoge->Print();
+    std::cout<<"hoge.Addr : "<<hoge<<std::endl;
+    
+    hoge->Update(33,"Fuku");
+    hoge->Print();
+    std::cout<<"hoge.Addr : "<<hoge<<std::endl;
+    
+    delete hoge;
+    hoge->Print();
+    std::cout<<"hoge.Addr : "<<hoge<<std::endl;
+    
+    hoge->Update(10,"Kane");
+    hoge->Print();
+    std::cout<<"hoge.Addr : "<<hoge<<std::endl;
+    
+}
+
+
 int main(void){
     Double();
     Array();
+    Class();
 
     return 0;
 }
